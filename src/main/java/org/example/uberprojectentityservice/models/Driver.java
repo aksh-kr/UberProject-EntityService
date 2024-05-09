@@ -45,6 +45,8 @@ public class Driver extends BaseModel {
     @Column(nullable = false)
     private Double rating;
 
+    private Boolean isAvailable;
+
     // 1:n , Driver : Booking
     @OneToMany(mappedBy = "driver", fetch = FetchType.LAZY)
     @Fetch(FetchMode.SUBSELECT)
