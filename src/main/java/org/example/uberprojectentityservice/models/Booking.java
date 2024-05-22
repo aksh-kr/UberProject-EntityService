@@ -33,9 +33,11 @@ public class Booking extends BaseModel{
     @ManyToOne
     private Passenger passenger;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private ExactLocation startLocation;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private ExactLocation endLocation;
+
+    //TODO: Add a pricing property
 }
